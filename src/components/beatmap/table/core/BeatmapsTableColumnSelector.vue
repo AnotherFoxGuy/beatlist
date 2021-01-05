@@ -36,6 +36,7 @@ export default Vue.extend({
       { value: "difficulties", text: "Difficulties" },
       { value: "playlists", text: "Playlists" },
       { value: "dl", text: "Downloads" },
+      { value: "nps", text: "NPS" },
       { value: "plays", text: "Plays" },
       { value: "upvotes", text: "Up votes" },
       { value: "downvotes", text: "Down votes" },

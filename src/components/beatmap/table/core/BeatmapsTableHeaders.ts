@@ -7,6 +7,7 @@ export enum BeatmapsTableHeadersTemplate {
   TextTooltip = "TextTooltip",
   BeatmapName = "BeatmapName",
   Rating = "Rating",
+  NotesPerSecond = "NotesPerSecond",
 }
 
 export enum BeatmapsTableFilterType {

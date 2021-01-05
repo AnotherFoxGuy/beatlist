@@ -123,6 +123,7 @@ import BeatmapsTableTemplateStrToDate from "@/components/beatmap/table/core/temp
 import BeatmapsTableTemplateDifficulties from "@/components/beatmap/table/core/template/BeatmapsTableTemplateDifficulties.vue";
 import BeatmapsTableTemplatePlaylists from "@/components/beatmap/table/core/template/BeatmapsTableTemplatePlaylists.vue";
 import BeatmapsTableTemplateRating from "@/components/beatmap/table/core/template/BeatmapsTableTemplateRating.vue";
+import BeatmapsTableTemplateNotesPerSecond from "@/components/beatmap/table/core/template/BeatmapsTableTemplateNotesPerSecond.vue";
 import BeatmapsTableColumnSelector from "@/components/beatmap/table/core/BeatmapsTableColumnSelector.vue";
 import BeatmapsTableFooter from "@/components/beatmap/table/core/BeatmapsTableFooter.vue";
 import BeatmapsTableFilterRow from "@/components/beatmap/table/core/BeatmapsTableFilterRow.vue";
@@ -141,6 +142,7 @@ export default Vue.extend({
     BeatmapsTableTemplateBeatmapName,
     BeatmapsTableTemplateStrToDate,
     BeatmapsTableTemplateRating,
+    BeatmapsTableTemplateNotesPerSecond,
     Tooltip,
   },
   props: {
@@ -272,6 +274,17 @@ export default Vue.extend({
           filterType: BeatmapsTableFilterType.RangeInt,
           localFilter: (value: number) =>
             FilterRange(value, this.filtersValue.dl),
+          sort: sortNumber,
+          width: 50,
+        },
+        {
+          value: "nps",
+          text: "Notes per second",
+          template: BeatmapsTableHeadersTemplate.NotesPerSecond,
+          templateItemAccess: "stats.downloads",
+          align: "center",
+          sortable: false,
+          filterable: false,
           sort: sortNumber,
           width: 50,
         },
